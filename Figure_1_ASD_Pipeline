@@ -1,0 +1,29 @@
+digraph ASD_ML_Pipeline {
+	fontsize=12 rankdir=LR
+	A [label="Dataset (CSV)
+(asd_synthetic_dataset_v2.csv)"]
+	B [label="Categorical Encoding
+(LabelEncoder)"]
+	C [label="Feature Selection
+RFE (Top 12)"]
+	D [label="Train–Test Split
+(80/20 Stratified)"]
+	E [label="Scaling
+Min–Max Scaler"]
+	F [label="Imbalance Handling
+SMOTE (Train only)"]
+	G [label="Model Training
+Soft Voting (SVM + NB)"]
+	H [label="Evaluation
+Confusion Matrix + ROC-AUC"]
+	I [label="Deployment
+Streamlit Tool"]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	H -> I
+}
