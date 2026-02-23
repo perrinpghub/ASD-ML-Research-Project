@@ -48,4 +48,6 @@ Md. Abdur Rahim
 
 Southeast University, Bangladesh
 
+## License 
 Academic and research use only.
+This project is intended for educational and research purposes only.
